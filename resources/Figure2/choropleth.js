@@ -13,7 +13,7 @@ var currentRectW = 0, currentRectH = 0;
 var isLog = false, scaleX = 10, scaleY = 385, scaleX2 = 20, scaleY2 = 400;
 var width = window.innerWidth, height = window.innerHeight;
 var map = d3.choropleth()
-    .geofile('/resources/Figure 2/d3-geomap/dist/topojson/world/countries.json')
+    .geofile('https://raw.githubusercontent.com/HuangruiChu/Bird-Collision-Visualization/main/resources/Figure2/d3-geomap/dist/topojson/world/countries.json')
     .colors(d3.schemeYlGnBu[9])
     .column('Mar')
     .format(function(d) {return format(d, isLog);})
@@ -71,8 +71,8 @@ function on_click(d, i, data, data_log) {
     trans.attr('transform', 'translate(' + transX + ', ' + transY + ')').duration(500);
 }
 
-d3.csv('/resources/Figure 2/iNaturalist_country_contrubution.csv').then(data => {
-    d3.csv('/resources/Figure 2/iNaturalist_country_contrubution_log.csv').then(data_log => {
+d3.csv('https://raw.githubusercontent.com/HuangruiChu/Bird-Collision-Visualization/main/resources/Figure2/iNaturalist_country_contrubution.csv').then(data => {
+    d3.csv('https://raw.githubusercontent.com/HuangruiChu/Bird-Collision-Visualization/main/resources/Figure2/iNaturalist_country_contrubution_log.csv').then(data_log => {
         currentRectW = monthStartX - textWidth / 2;
         currentRectH = monthStartY - textHeight / 2;
         isLog = false;
