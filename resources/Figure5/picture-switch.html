@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>超简单的图片左右切换滑动</title>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+var cot=0;//设置一个计数器，初始值为0；作用是用来监听点击切换的时候哪一个图片应该隐藏或者显示
+function nex(){
+  if(cot<=2){
+    $('.imgs img').eq(cot).animate({'margin-left':'-305px'},500);
+    cot++;
+  }
+}
+function pre(){
+  if(cot>0){
+    cot--;
+    $('.imgs img').eq(cot).animate({'margin-left':'0'},500);
+  }
+}
+</script>
+</head>
+<body>
+<div style="width:900px;margin:auto;overflow:hidden"> <!-- 这个最外围的容器div宽度为900px，每张图宽为300px，所以只显示3张，剩下的图超出容器隐藏起来 -->
+  <div class="imgs" style="width:50000px;"><!--这个div的作用是让所有的图片都排在同一水平上，这样子切换的时候效果会更好-->
+    <img src="1.png" /><!--这里的图片换上到时候自己对应的图片-->
+    <img src="2.png" />
+    <img src="3.png" />
+    <img src="4.png" />
+    <img src="5.png" />
+    <img src="6.png" />
+  </div>
+  <div>
+    <div onclick="pre()" style="float:left;cursor:pointer">上一页</div>
+    <div onclick="nex()" style="float:right;cursor:pointer">下一页</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bird Collision Cases in Water Pavilion</title>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+var cot=0;//设置一个计数器，初始值为0；作用是用来监听点击切换的时候哪一个图片应该隐藏或者显示
+function nex(){
+  if(cot<=2){
+    $('.imgs img').eq(cot).animate({'margin-left':'-305px'},500);
+    cot++;
+  }
+}
+function pre(){
+  if(cot>0){
+    cot--;
+    $('.imgs img').eq(cot).animate({'margin-left':'0'},500);
+  }
+}
+</script>
+</head>
+<body>
+  <h1 align = "center">Bird Collision Cases in Water Pavilion</h1>
+<div style="width:900px;margin:auto;overflow:hidden">
+    <img src = "water pavilion photos/WP1.jpg"/>
+    <img src = "water pavilion photos/WP2.jpg"/>
+  </div>
+  <div>
+    <div onclick="pre()" style="float:left;cursor:pointer">Previous Page</div>
+    <div onclick="nex()" style="float:right;cursor:pointer">Next Page</div>
+  </div>
+</div>
+</body>
+</html>
