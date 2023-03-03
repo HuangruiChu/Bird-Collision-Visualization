@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Bird Collision Simulation</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+      p{letter-height:2px;
+       }
+      h1{
+      font-size:40px;/*字体大小18px*/
+      /*text-shadow: 5px 5px 5px black, 0px 0px 1px black;*/
+      color: black;
+      margin-top: 30px;
+      }
+      h2{
+      font-size:25px;/*字体大小18px*/
+      /*text-shadow: 2px 2px 0px black, 0px 0px 2px black;*/
+      color: black;
+      }
+      body{
+      background-attachment:scroll;
+      /*background-repeat: no-repeat;*/
+      background-position: center top;
+      background-size: 100% auto;
+      background-image: url('resources/Figure 5/full-background/1.png');
+      }
+      button{
+        font-size: 10px;
+        height:120px;
+        width:100px;
+        border-radius:50px !important;
+        background-image: url('resources/Figure 5/2.png');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-color: white;
+      }
+	  button#Refresh, button#FinalOutcome {
+        font-size: 10px;
+        height:100px;
+        width:100px;
+        border-radius:0px !important;
+        background-image: url('resources/Figure 5/3.png');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-color: white;
+      }
+      button#Refresh {
+        margin-left: 20em;
+      }
+
+      #background{
+        /*background:skyblue;*/
+          background-image: url('resources/Figure 5/birds/livebirds2.jpg');
+        width: 900px;
+        height: 500px;
+        margin: auto;
+				background-size: 100% auto;
+      }
+      .tool {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+	</head>
+
+	<body>
+		<h1 align="center" id="title">Welcome to the Bird's World</h1>
+        <h2 align="center">The Final Outcome of Bird</h2>
+        <h3 align="center" id="outcome">The Bird is flying</h3>
+        <div id="background"></div>
+        <div class="tool">
+            <button type="button" onclick="window1()" id="window1">Reflect Glass</button>
+            <button type="button" onclick="window2()" id="window2">Special Glass</button>
+			<button type="button" onclick="forest()" id="Forest">Forest</button>
+			<button type="button" onclick="refresh()" id="Refresh">Refresh</button>
+			<button type="button" onclick="final_outcome()" id="FinalOutcome">See Final Outcome</button>
+
+        </div>
+        <script type="text/javascript" src = "resources/Figure 5/bird_simulation.js"> </script>
+	</body>
+</html>

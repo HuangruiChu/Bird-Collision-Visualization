@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote for Your Way to Prevent Bird Collision</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <style >
+    p{letter-height:2px;
+     }
+    h1{
+    font-size:40px;/*字体大小18px*/
+    /*text-shadow: 1px 1px 1px black, 0px 0px 1px black;*/
+    color: black;
+    margin-top: 30px;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    }
+    h2{
+    font-size:30px;/*字体大小18px*/
+    /*text-shadow: 5px 5px 5px black, 0px 0px 2px black;*/
+    color: black;
+    margin-top: 0px;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    }
+    h2.method {
+        margin-bottom: 0px;
+        margin-top: 182px;
+    }
+    .mainText {
+        font-size: 25px;
+        font-family: "Times New Roman";
+        font-weight: normal;
+    }
+    body{
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;}
+    button{
+      height:100px;
+      width:100px;
+      border-radius:50px !important;
+    }
+
+    #wrap{
+      width: 1200px;
+      height: 680px;
+      margin: auto; /*这边写0就是从最左侧开始，这边写auto，就会把柱状图往右推*/
+      /*我测试了一下，60px 可能比较合适？注意要加px。*/
+    }
+    .container {
+
+      margin:auto;
+      display: block;
+    }
+    #prompt {
+      width: 60px;
+      height: 40px;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 40px;
+      background: #666;/*出现的数字背景的颜色*/
+      color: #fff;/*设置的是点击的时候出现的数据的数字颜色*/
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      transition: all 0.1s;
+    }
+    .tool {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .tool button {
+      background-size: 97px 97px;
+    }
+    .tool button#btn-sort {
+      background-image: url("resources/Figure 6/icons/sort.png");
+    }
+    .tool button#btn-like1 {
+      background-image: url("resources/Figure 6/icons/1.png");
+    }
+    .tool button#btn-like2 {
+      background-image: url("resources/Figure 6/icons/2.png");
+    }
+    .tool button#btn-like3 {
+      background-image: url("resources/Figure 6/icons/3.png");
+    }
+  </style>
+</head>
+<body>
+    <h1 align="center">Vote for Your Way to Prevent Bird Collision</h1>
+    <br />
+    <br />
+  <div style="padding-left:100px;">
+    <h2 align="left" class="method" style="margin-top: 0px;">Method1:</h2>
+    <h2 align="left">Build bird friendly buildings</h2>
+    <left class="mainText">
+      Reduce the usage of Glasses or use the glasses <br /> that could
+      prevent the bird from collision</left>
+
+      <div style = "position:absolute; right: 150px;top:100px">
+      <img src="resources/Figure 6/threepictures/图一.png" width = "350px" height = "320px" x = "800px"/>
+      </div>
+
+    <h2 align="left" class="method">Method2:</h2 >
+    <h2 align="left">Reconstruct buildings and environment</h2 >
+     <left class="mainText">
+        Attach the stickers that could frighten the birds or <br /> make them
+        think they could not fly through this window</left>
+        <div style = "position:absolute; right: 150px;top:430px">
+        <img src="resources/Figure 6/threepictures/图二.png" width = "350px" height = "320px" x = "800px"/>
+        </div>
+
+    <h2 align="left" class="method">Method3</h2 >
+    <h2 align="left">Change your living habit</h2>
+     <left class="mainText">
+        Close the light when you fall asleep; Draw the curtains;
+       <br />Put the plant away from the window</left>
+       <div style = "position:absolute; right: 150px;top:760px">
+       <img src="resources/Figure 6/threepictures/图三.png" width = "350px" height = "320px" x = "800px"/>
+       </div>
+  </div>
+
+  <h2 align = "center" style="margin-top: 200px;">VOTE</h2>
+
+  <div id="wrap">
+    <div id="prompt"></div>
+  </div>
+    <div class="tool">
+      <!-- /* 这边添加自己要的功能*/ -->
+      <button id="btn-sort"></button>
+      <button id="btn-like1"></button>
+      <button id="btn-like2"></button>
+      <button id="btn-like3"></button>
+    <script type="text/javascript", src = "resources/Figure 6/vote.js"> </script>
+</body>
+</html>

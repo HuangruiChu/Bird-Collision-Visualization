@@ -1,0 +1,33 @@
+<!-- 代码来源：https://observablehq.com/@d3/zoomable-sunburst
+数据负责人：储黄瑞
+使用负责人：储黄瑞
+时间轴负责人：李一和 -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Zoomable Sunburst Inaturalist 观察到的物种数据 树状分析</title>
+<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/HuangruiChu/Bird-Collision-Visualization/main/resources/Figure3/inspector.css">
+<style >
+  p{letter-height:2px}
+  h1{
+  /*text-shadow: 5px 5px 5px black, 0px 0px 2px black;*/
+  color: black;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 0px;
+  }
+  h2{
+  font-size:45px;/*字体大小18px*/
+  text-shadow: 5px 5px 5px black, 0px 0px 2px black;
+  color: white;
+  }
+</style>
+<body>
+<script type="module">
+
+import define from "https://raw.githubusercontent.com/HuangruiChu/Bird-Collision-Visualization/main/resources/Figure3/index.js";
+import {Runtime, Library, Inspector} from "https://raw.githubusercontent.com/HuangruiChu/Bird-Collision-Visualization/main/resources/Figure3/runtime.js";
+
+const runtime = new Runtime();
+const main = runtime.module(define, Inspector.into(document.body));
+
+</script>
